@@ -729,6 +729,33 @@ a {
   color: var(--color-accent);
 }
 
+/* Language switch (esquina superior derecha) */
+.lang-switch {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.5rem;
+  z-index: 400;
+  background: var(--color-surface);
+  color: var(--color-background);
+  border: 0.5px solid var(--color-background);
+  padding: 0.35rem 0.75rem;
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.lang-switch:hover {
+  color: var(--color-accent);
+}
+
+.lang-switch .lang-short {
+  display: none;
+}
+
 /* Modal */
 .image-modal {
   display: none;
@@ -813,6 +840,27 @@ a {
 
   .page-wrap {
     padding-top: 56px;
+  }
+
+  /* En móvil el botón de idioma queda dentro de la topbar, a la izquierda del menú */
+  .lang-switch {
+    top: 14px;
+    right: 3.5rem;
+    border: none;
+    padding: 0.3rem 0.5rem;
+    font-size: 14px;
+  }
+
+  .lang-switch .lang-long {
+    display: none;
+  }
+
+  .lang-switch .lang-short {
+    display: inline;
+  }
+
+  .topbar-title {
+    margin-right: 3.5rem;
   }
 
   .sidebar {
